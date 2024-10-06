@@ -1,0 +1,44 @@
+.bg-black {
+  background-color: black;
+}
+.invert {
+  filter: invert(1);
+}
+.bg-grey {
+  background-color: #121212;
+}
+.p-1 {
+  padding: 6px;
+}
+.rounded {
+  border-radius: 10px;
+}
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+}
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+.shiftabitright {
+  margin-left: 10px;
+}
+.shiftabitdown {
+  margin-top: 5px;
+}
+.shiftabitup {
+  margin-bottom: 15px;
+}
+.justifycenter {
+  justify-content: center;
+}
+.aligncenter {
+  align-items: center;
+}
+.flexstart {
+  align-items: flex-start;
+}
+.flexend {
+  align-items: flex-end;
+}
