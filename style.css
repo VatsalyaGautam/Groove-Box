@@ -9,11 +9,12 @@ body {
   background-color: black;
   color: white;
 }
+
 #left {
-  width: 21vw;
+  width: 21%;
 }
 #right {
-  width: 79vw;
+  width: 79%;
 }
 #home {
   height: 20vh;
@@ -45,4 +46,28 @@ footer a {
   color: #b3b3b3;
   font-size: x-small;
   margin-right: 10px;
+}
+#header {
+  height: 7vh;
+  justify-content: space-between;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+#signin {
+  background-color: transparent;
+  border: none;
+  color: #b3b3b3;
+  font-size: 16px;
+  margin-right: 18px;
+}
+#login {
+  font-size: 16px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  background-color: white;
+  border: none;
+}
+#leftchevron {
+  margin-right: 6.5px;
 }

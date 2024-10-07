@@ -42,3 +42,9 @@
 .flexend {
   align-items: flex-end;
 }
+.showdiv {
+  border: 3px solid red;
+}
+.inline-block {
+  display: inline-block;
+}
