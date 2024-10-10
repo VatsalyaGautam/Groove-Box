@@ -5,11 +5,20 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
+
 body {
   background-color: black;
   color: white;
 }
-
+#logo {
+  transition: ease-in-out;
+  transition-delay: 0.25s;
+}
+#logo:hover {
+  transform: scale(1.08);
+  border: 2px solid #4d4b4d;
+  border-radius: 4%;
+}
 #left {
   width: 21%;
 }
@@ -24,9 +33,7 @@ body {
   height: 80vh;
   justify-content: space-between;
 }
-#home {
-  margin-top: 1.25vh;
-}
+
 #ul1 {
   gap: 15px;
   padding-left: 10px;
@@ -51,8 +58,6 @@ footer a {
   height: 7vh;
   justify-content: space-between;
   padding: 5px;
-  margin-top: 10px;
-  margin-left: 5px;
 }
 #signin {
   background-color: transparent;
@@ -60,6 +65,8 @@ footer a {
   color: #b3b3b3;
   font-size: 16px;
   margin-right: 18px;
+  cursor: pointer;
+  transition: 0.25 ease-in-out;
 }
 #login {
   font-size: 16px;
@@ -67,7 +74,88 @@ footer a {
   border-radius: 30px;
   background-color: white;
   border: none;
+  cursor: pointer;
+  transition: 0.25 ease-in-out;
+}
+#signin:hover {
+  color: #eae8e8;
+  transform: scale(1.1);
+}
+#login:hover {
+  color: #000000;
+  background-color: #66ff99;
+  transform: scale(1.1);
 }
 #leftchevron {
   margin-right: 6.5px;
+}
+#spotifyplaylists {
+  height: 93vh;
+}
+
+#contentplaylists {
+  padding-left: 5px;
+  font-size: x-large;
+  flex-shrink: 0;
+}
+#cardContainer {
+  justify-content: space-around;
+  max-height: 68vh;
+  overflow-y: scroll;
+}
+#cardContainer > * > img {
+  border-radius: 7%;
+  width: 100%;
+
+  object-fit: contain;
+}
+
+#cardContainer > * {
+  padding: 15px;
+  border-radius: 7%;
+  border: 2px solid rgba(0, 0, 0, 0.711);
+  width: 18vw;
+  height: 39.5vh;
+  transition: ease-in;
+  transition-delay: 0.01s;
+  background-color: #121212;
+}
+#cardContainer > *:hover {
+  background-color: #4d4b4d;
+  cursor: pointer;
+}
+#cardContainer > * > h2 {
+  font-weight: 500;
+  margin: 5px 0px;
+  color: rgba(235, 235, 235, 0.937);
+}
+#cardContainer > * > p {
+  color: #7c7a7aeb;
+}
+.play-button-container {
+  width: 50px; /* Set width of the circle */
+  height: 50px; /* Set height of the circle */
+  background-color: #1db954; /* Spotify green color */
+  border-radius: 50%; /* Make it a circle */
+  display: flex; /* Flexbox to center content */
+  justify-content: center; /* Horizontally center the play icon */
+  align-items: center; /* Vertically center the play icon */
+  cursor: pointer;
+  bottom: 80px;
+  right: 22px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-in; /* Make it look clickable */
+}
+#cardContainer > *:hover > .play-button-container {
+  transform: translateY(0px);
+  opacity: 1;
+}
+#cardContainer > *:not(:hover) > .play-button-container {
+  opacity: 0; /* Keep the button visible when not hovered */
+  transform: translateY(0); /* Keep it in the original position */
+}
+.play-button-container i {
+  color: white; /* White color for the play icon */
+  font-size: 24px; /* Adjust the size of the icon */
 }

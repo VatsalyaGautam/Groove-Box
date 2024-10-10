@@ -10,16 +10,20 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <title>Spotify:Web Music Player</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
     <div id="container" class="flexrow">
-      <div id="left" class="inline-block bg-black">
-        <div id="home" class="bg-grey p-1 rounded shiftabitright">
-          <img
-            class="invert shiftabitright shiftabitdown"
-            src="logo.svg"
-            alt="Spotify logo"
-          />
+      <div id="left" class="bg-black">
+        <div id="home" class="bg-grey p-1 rounded shiftabitright shiftabitdown">
+          <a href="#"
+            ><img
+              class="invert shiftabitright shiftabitdown"
+              src="logo.svg"
+              id="logo"
+              alt="Spotify logo"
+          /></a>
           <ul id="ul1" class="flexcolumn">
             <li class="invert flexrow">
               <img src="home.svg" alt="Home" /> Home
@@ -31,7 +35,7 @@
         </div>
         <div
           id="library"
-          class="flexcolumn bg-grey p-1 rounded shiftabitright shiftabitup"
+          class="flexcolumn bg-grey p-1 rounded shiftabitright shiftabitdown"
         >
           <div
             id="library-in1"
@@ -66,8 +70,11 @@
           </footer>
         </div>
       </div>
-      <div id="right" class="inline-block">
-        <div id="header" class="flexrow bg-grey p-1 rounded">
+      <div id="right">
+        <div
+          id="header"
+          class="flexrow bg-grey p-1 rounded shiftabitdown shiftabitright shiftabitleft"
+        >
           <div id="nav" class="flexrow aligncenter shiftabitright">
             <i id="leftchevron" class="fa fa-chevron-left fa-2x"></i>
             <i class="fa fa-chevron-right fa-2x"></i>
@@ -77,7 +84,58 @@
             <button id="login">Log in</button>
           </div>
         </div>
+        <div
+          id="spotifyplaylists"
+          class="bg-grey flexcolumn p-1 shiftabitdown shiftabitleft shiftabitright rounded"
+        >
+          <h1
+            id="contentplaylists"
+            class="shiftabitdown shiftabitright shiftabitup"
+          >
+            Spotify Playlists
+          </h1>
+          <div
+            id="cardContainer"
+            class="flexrow shiftabitleft shiftabitright wrap"
+          >
+            <div id="card1" class="relative">
+              <div class="absolute play-button-container">
+                <i class="invert fa-solid fa-play"></i>
+              </div>
+              <img src="cards/card1.jpg" alt="Happy Hits" />
+              <h2>Happy Hits!</h2>
+              <p class="understated">
+                Enjoy with the latest hits curated for you
+              </p>
+            </div>
+            <div id="card2" class="relative">
+              <div class="absolute play-button-container">
+                <i class="invert fa-solid fa-play"></i>
+              </div>
+              <img src="cards/card2.jpg" alt="Sleep Songs" />
+              <h2>Sleep songs</h2>
+              <p class="understated">Sleep songs for you</p>
+            </div>
+            <div id="card3" class="relative">
+              <div class="absolute play-button-container">
+                <i class="invert fa-solid fa-play"></i>
+              </div>
+              <img src="cards/card3.jpeg" alt="Alt mix" />
+              <h2>Alt mix</h2>
+              <p class="understated">Listen to alternative music</p>
+            </div>
+            <div id="card4" class="relative">
+              <div class="absolute play-button-container">
+                <i class="invert fa-solid fa-play"></i>
+              </div>
+              <img src="cards/card4.jpeg" alt="Women in music" />
+              <h2>Women in Music</h2>
+              <p class="understated">Listen to feminine melodies</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
