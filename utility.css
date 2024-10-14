@@ -63,25 +63,28 @@
 .absolute {
   position: absolute;
 }
-/* Webkit Browsers (Chrome, Safari, Edge) */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px; /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #2a2a2a;
-  border-radius: 10px;
+  background-color: #000; /* Dark background for the track */
+  border-radius: 10px; /* Rounded corners */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #555;
-  border-radius: 10px;
+  background-color: #1db954; /* Spotify green color for the scrollbar */
+  border-radius: 10px; /* Rounded corners for the scrollbar */
+  border: 3px solid #000; /* Padding around the scrollbar to make it sleeker */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #888;
+  background-color: #1ed760; /* Lighter green when hovered */
 }
+
+/* For Firefox */
 * {
-  scrollbar-width: auto;
-  scrollbar-color: #555 #2a2a2a;
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: #1db954 #000; /* Scroll thumb color and track background */
 }

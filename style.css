@@ -90,7 +90,7 @@ footer a {
   margin-right: 6.5px;
 }
 #spotifyplaylists {
-  height: 93vh;
+  height: 80vh;
 }
 
 #contentplaylists {
@@ -100,7 +100,7 @@ footer a {
 }
 #cardContainer {
   justify-content: space-around;
-  max-height: 68vh;
+  flex-grow: 1;
   overflow-y: scroll;
 }
 #cardContainer > * > img {
@@ -158,4 +158,13 @@ footer a {
 .play-button-container i {
   color: white; /* White color for the play icon */
   font-size: 24px; /* Adjust the size of the icon */
+}
+#playbar {
+  bottom: 50px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 100%;
+  padding: 12px;
+  border: 2px solid red;
+  text-align: center;
 }
