@@ -6,47 +6,23 @@
   font-weight: 700;
 }
 
+/* Responsive Base Styles */
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: black;
   color: white;
-}
-#logo {
-  transition: ease-in-out;
-  transition-delay: 0.25s;
-}
-#logo:hover {
-  transform: scale(1.08);
-  border: 2px solid #4d4b4d;
-  border-radius: 4%;
-}
-#left {
-  width: 21%;
-}
-#right {
-  width: 79%;
-}
-#home {
-  height: 20vh;
-  margin-bottom: 2px;
-}
-#library {
-  height: 80vh;
-  justify-content: space-between;
+  width: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
 }
 
-#ul1 {
-  gap: 15px;
-  padding-left: 10px;
-  padding-top: 15px;
-  padding-bottom: 8px;
-}
-li {
-  list-style: none;
-  color: black;
-  gap: 20px;
-}
-#library-in1 {
-  gap: 15px;
+/* Responsive Layout */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 footer a {
   text-decoration: none;
@@ -54,117 +30,243 @@ footer a {
   font-size: x-small;
   margin-right: 10px;
 }
-#header {
-  height: 7vh;
-  justify-content: space-between;
-  padding: 5px;
+/* Logo Styling */
+#logo {
+  max-width: 150px;
+  height: auto;
+  transition: all 0.25s ease-in-out;
 }
+
+#logo:hover {
+  transform: scale(1.08);
+  border: 2px solid #4d4b4d;
+  border-radius: 4%;
+}
+
+/* Responsive Columns */
+#left,
+#right {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  #left {
+    width: 21%;
+  }
+
+  #right {
+    width: 79%;
+  }
+}
+
+/* Responsive Sections */
+#home {
+  height: auto;
+  min-height: 20vh;
+  margin-bottom: 2px;
+}
+
+#library {
+  height: auto;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Navigation List */
+#ul1 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 10px 8px;
+}
+
+li {
+  list-style: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Header */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  min-height: 7vh;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+#signin,
+#login {
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
 #signin {
   background-color: transparent;
   border: none;
   color: #b3b3b3;
-  font-size: 16px;
   margin-right: 18px;
-  cursor: pointer;
-  transition: 0.25 ease-in-out;
 }
+
 #login {
-  font-size: 16px;
   padding: 8px 20px;
   border-radius: 30px;
   background-color: white;
   border: none;
-  cursor: pointer;
-  transition: 0.25 ease-in-out;
 }
+
 #signin:hover {
   color: #eae8e8;
   transform: scale(1.1);
 }
+
 #login:hover {
   color: #000000;
   background-color: #66ff99;
   transform: scale(1.1);
 }
-#leftchevron {
-  margin-right: 6.5px;
-}
-#spotifyplaylists {
-  height: 80vh;
-}
 
-#contentplaylists {
-  padding-left: 5px;
-  font-size: x-large;
-  flex-shrink: 0;
-}
+/* Card Container */
 #cardContainer {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  flex-grow: 1;
-  overflow-y: scroll;
-}
-#cardContainer > * > img {
-  border-radius: 7%;
-  width: 100%;
-
-  object-fit: contain;
+  gap: 15px;
+  overflow-y: auto;
+  padding: 10px;
 }
 
 #cardContainer > * {
+  flex: 0 1 calc(20% - 20px);
+  max-width: 250px;
+  min-width: 200px;
   padding: 15px;
   border-radius: 7%;
   border: 2px solid rgba(0, 0, 0, 0.711);
-  width: 18vw;
-  height: 39.5vh;
-  transition: ease-in;
-  transition-delay: 0.01s;
   background-color: #121212;
+  transition: all 0.2s ease-in;
+  box-sizing: border-box;
+  overflow: hidden;
+  word-wrap: break-word;
 }
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1200px) {
+  #cardContainer > * {
+    flex: 0 1 calc(25% - 20px);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #cardContainer > * {
+    flex: 0 1 calc(33.333% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #cardContainer > * {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #cardContainer > * {
+    flex: 0 1 100%;
+  }
+}
+
+/* Card Hover Effects */
 #cardContainer > *:hover {
   background-color: #4d4b4d;
   cursor: pointer;
 }
+
+#cardContainer > * > img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 #cardContainer > * > h2 {
   font-weight: 500;
-  margin: 5px 0px;
+  margin: 5px 0;
   color: rgba(235, 235, 235, 0.937);
+  font-size: 1.1rem;
 }
+
 #cardContainer > * > p {
   color: #7c7a7aeb;
+  font-size: 0.9rem;
 }
+
+/* Play Button */
 .play-button-container {
-  width: 50px; /* Set width of the circle */
-  height: 50px; /* Set height of the circle */
-  background-color: #1db954; /* Spotify green color */
-  border-radius: 50%; /* Make it a circle */
-  display: flex; /* Flexbox to center content */
-  justify-content: center; /* Horizontally center the play icon */
-  align-items: center; /* Vertically center the play icon */
+  width: 50px;
+  height: 50px;
+  background-color: #1db954;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  bottom: 80px;
-  right: 22px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.4s ease-in; /* Make it look clickable */
+  transition: all 0.4s ease-in;
 }
-#cardContainer > *:hover > .play-button-container {
-  transform: translateY(0px);
+
+#cardContainer > *:hover .play-button-container {
+  transform: translateY(0);
   opacity: 1;
 }
-#cardContainer > *:not(:hover) > .play-button-container {
-  opacity: 0; /* Keep the button visible when not hovered */
-  transform: translateY(0); /* Keep it in the original position */
-}
+
 .play-button-container i {
-  color: white; /* White color for the play icon */
-  font-size: 24px; /* Adjust the size of the icon */
+  color: white;
+  font-size: 24px;
 }
+
+/* Playbar */
 #playbar {
+  position: fixed;
   bottom: 50px;
-  right: 50%;
-  transform: translateX(50%);
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
   padding: 12px;
-  border: 2px solid red;
   text-align: center;
+  background-color: rgba(18, 18, 18, 0.9);
+  border-radius: 10px;
+}
+
+/* Touch Optimization */
+@media (hover: none) {
+  .play-button-container {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4d4b4d;
+  border-radius: 5px;
 }
