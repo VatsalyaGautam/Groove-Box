@@ -134,7 +134,6 @@ li {
   transform: scale(1.1);
 }
 
-
 #cardContainer {
   display: flex;
   flex-wrap: wrap;
@@ -270,4 +269,18 @@ li {
 ::-webkit-scrollbar-thumb {
   background: #4d4b4d;
   border-radius: 5px;
+}
+@media screen and (max-width: 375px) {
+  #container {
+    flex-direction: column;
+  }
+  #library {
+    display: none;
+  }
+  #home {
+    display: none;
+  }
+  #childlogo {
+    width: 100px;
+  }
 }
