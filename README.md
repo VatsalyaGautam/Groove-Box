@@ -1,10 +1,8 @@
-# Spotify Clone
-
-![Spotify Clone](https://via.placeholder.com/800x200?text=Spotify+Clone)
+# Groove Box
 
 ## Description
 
-This is a Spotify clone web application that allows users to stream music and create playlists. The project aims to replicate the core functionalities of Spotify, providing users with a platform to discover and enjoy their favorite tracks.
+This is a  web application that allows users to stream music . The project aims to replicate the core functionalities of Spotify, providing users with a platform to discover and enjoy their favorite tracks.
 
 ## Installation
 
