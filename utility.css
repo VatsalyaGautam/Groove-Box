@@ -1,6 +1,9 @@
 .bg-black {
   background-color: black;
 }
+.cursorpointer{
+  cursor:pointer
+}
 .invert {
   filter: invert(1);
 }
@@ -12,6 +15,9 @@
 }
 .rounded {
   border-radius: 10px;
+}
+.spacearound {
+  justify-content: space-around;
 }
 .flexcolumn {
   display: flex;
@@ -63,28 +69,32 @@
 .absolute {
   position: absolute;
 }
-/* Custom Scrollbar */
+
 ::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 12px; /
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #000; /* Dark background for the track */
-  border-radius: 10px; /* Rounded corners */
+  background-color: #000; 
+  border-radius: 10px; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #1db954; /* Spotify green color for the scrollbar */
-  border-radius: 10px; /* Rounded corners for the scrollbar */
-  border: 3px solid #000; /* Padding around the scrollbar to make it sleeker */
+  background-color: #1db954; 
+  border-radius: 10px; 
+  border: 3px solid #000;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #1ed760; /* Lighter green when hovered */
+  background-color: #1ed760; 
 }
 
-/* For Firefox */
+
 * {
-  scrollbar-width: thin; /* Makes the scrollbar thinner */
-  scrollbar-color: #1db954 #000; /* Scroll thumb color and track background */
+  scrollbar-width: thin; 
+  scrollbar-color: #1db954 #000; 
+}
+.flexcolumnreverse {
+  display: flex;
+  flex-direction: column-reverse;
 }

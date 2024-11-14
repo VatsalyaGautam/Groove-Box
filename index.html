@@ -1,216 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1"
-    />
-    <title>Spotify-clone</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="utility.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <title>Spotify:Web Music Player</title>
-  </head>
-  <body>
-    <div id="container" class="flexrow">
-      <div id="left" class="bg-black">
-        <div id="home" class="bg-grey p-1 rounded shiftabitright shiftabitdown">
-          <a href="#"
-            ><img
-              class="invert shiftabitright shiftabitdown"
-              src="logo.svg"
-              id="logo"
-              alt="Groove logo"
-          /></a>
-          <ul id="ul1" class="flexcolumn">
-            <li class="invert flexrow">
-              <img src="home.svg" alt="Home" /> Home
-            </li>
-            <li class="invert flexrow">
-              <img src="search.svg" alt="playlist" />Search
-            </li>
-          </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Spotify-clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="utility.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <title>Spotify:Web Music Player</title>
+</head>
+
+<body>
+
+  <div id="mov">
+    <video
+    id="vid"
+      loop
+      autoplay
+      muted
+      src="cards/vecteezy_digital-circle-audio-spectrum-sound-wave-equalizer-effect_47453519.mp4"
+      type="video/mp4"
+    ></video>
+  </div>
+    
+
+  <div id="container" class="flexrow">
+    <div id="left" class="bg-black">
+      <div id="home" class="bg-grey p-1 rounded shiftabitright shiftabitdown">
+        <a id="logoAnchor" href="#"><img class="invert shiftabitright shiftabitdown" src="logo.svg" id="logo" alt="Groove logo" /></a>
+        <ul id="ul1" class="flexcolumn">
+          <li class="invert flexrow">
+            <img src="home.svg" alt="Home" /> Home
+          </li>
+          <li class="invert flexrow">
+            <img src="search.svg" alt="playlist" />Search
+          </li>
+        </ul>
+      </div>
+      <div id="library" class="flexcolumn bg-grey p-1 rounded shiftabitright shiftabitdown">
+        <div id="library-in1" class="flexrow aligncenter shiftabitdown shiftabitright">
+          <img class="invert" src="playlist.svg" />
+          Your Library
         </div>
-        <div
-          id="library"
-          class="flexcolumn bg-grey p-1 rounded shiftabitright shiftabitdown"
-        >
-          <div
-            id="library-in1"
-            class="flexrow aligncenter shiftabitdown shiftabitright"
-          >
-            <img class="invert" src="playlist.svg" />
-            Your Library
-          </div>
-          <footer class="shiftabitright shiftabitup">
-            <a href="https://www.spotify.com/in-en/legal/">Legal</a>
-            <a href="https://www.spotify.com/in-en/safetyandprivacy/"
-              >Safety &amp; Privacy Center</a
-            >
-            <a href="https://www.spotify.com/in-en/legal/privacy-policy/"
-              >Privacy Policy</a
-            >
-            <a href="https://www.spotify.com/in-en/legal/cookies-policy/"
-              >Cookies</a
-            >
-            <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
-              >About Ads</a
-            >
-            <a href="https://www.spotify.com/in-en/accessibility/"
-              >Accessibility</a
-            >
-            <a
-              href="https://www.spotify.com/legal/cookies-policy/"
-              target="_blank"
-              rel="noopener"
-              >Cookies</a
-            >
-          </footer>
+
+        <div id="song-libraries">
+          <h1></h1>
+        </div>
+
+        <footer class="shiftabitright shiftabitup">
+          <a href="https://www.spotify.com/in-en/legal/">Legal</a>
+          <a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety &amp; Privacy Center</a>
+          <a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a>
+          <a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a>
+          <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a>
+          <a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a>
+          <a href="https://www.spotify.com/legal/cookies-policy/" target="_blank" rel="noopener">Cookies</a>
+        </footer>
+      </div>
+    </div>
+    <div id="right" class="relative">
+      <div id="header" class="flexrow bg-grey p-1 rounded shiftabitdown shiftabitright shiftabitleft">
+        <div id="nav" class="flexrow aligncenter shiftabitright">
+          <i id="leftchevron" class="fa fa-chevron-left fa-2x"></i>
+          <i id="rightchevron" class="fa fa-chevron-right fa-2x"></i>
+        </div>
+        <div id="buttons" class="flexrow">
+          <button id="signin">Sign up</button>
+          <button id="login">Log in</button>
         </div>
       </div>
-      <div id="right" class="relative">
-        <div
-          id="header"
-          class="flexrow bg-grey p-1 rounded shiftabitdown shiftabitright shiftabitleft"
-        >
-          <div id="nav" class="flexrow aligncenter shiftabitright">
-            <i id="leftchevron" class="fa fa-chevron-left fa-2x"></i>
-            <i  id="rightchevron" class="fa fa-chevron-right fa-2x"></i>
-          </div>
-          <div id="buttons" class="flexrow">
-            <button id="signin">Sign up</button>
-            <button id="login">Log in</button>
-          </div>
-        </div>
-        <div
-          id="spotifyplaylists"
-          class="bg-grey flexcolumn p-1 shiftabitdown shiftabitleft shiftabitright rounded"
-        >
-          <h1
-            id="contentplaylists"
-            class="shiftabitdown shiftabitright shiftabitup"
-          >
-            Groove Playlists
-          </h1>
-          <div
-            id="cardContainer"
-            class="flexrow shiftabitleft shiftabitright wrap"
-          >
-            <div id="card1" class="relative">
-              <div class="absolute play-button-container">
-                <i class="invert fa-solid fa-play"></i>
-              </div>
-              <img src="cards/card1.jpeg" alt="Alt mix" />
-              <h2>Alt mix</h2>
-              <p class="understated">Listen to alternative music</p>
+      <div id="spotifyplaylists" class="bg-grey flexcolumn p-1 shiftabitdown shiftabitleft shiftabitright rounded">
+        <h1 id="contentplaylists" class="shiftabitdown shiftabitright shiftabitup">
+          Groove Playlists
+        </h1>
+        <div id="cardContainer" class="flexrow shiftabitleft shiftabitright wrap">
+          <div id="card1" class="relative">
+            <div class="absolute play-button-container">
+              <i class="invert fa-solid fa-play"></i>
             </div>
+            <img src="cards/card1.jpeg" alt="Alt mix" />
+            <h2>Alt mix</h2>
+            <p class="understated">Listen to alternative music</p>
+          </div>
 
-            <div id="card2" class="relative">
-              <div class="absolute play-button-container">
-                <i class="invert fa-solid fa-play"></i>
-              </div>
-              <img src="cards/card2.jpg" alt="Sleep Songs" />
-              <h2>post-punk</h2>
-              <p class="understated">1.5M+ followers</p>
+          <div id="card2" class="relative">
+            <div class="absolute play-button-container">
+              <i class="invert fa-solid fa-play"></i>
             </div>
-            <div id="card3" class="relative">
-              <div class="absolute play-button-container">
-                <i class="invert fa-solid fa-play"></i>
-              </div>
-              <img src="cards/card3.jpeg" alt="Alt mix" />
-              <h2>Women in Music</h2>
-              <p class="understated">Listen to feminine melodies</p>
+            <img src="cards/card2.jpg" alt="Sleep Songs" />
+            <h2>post-punk</h2>
+            <p class="understated">1.5M+ followers</p>
+          </div>
+          <div id="card3" class="relative">
+            <div class="absolute play-button-container">
+              <i class="invert fa-solid fa-play"></i>
             </div>
-            <div id="card4" class="relative">
-              <div class="absolute play-button-container">
-                <i class="invert fa-solid fa-play"></i>
-              </div>
-              <img src="cards/card4.jpeg" alt="Women in music" />
-              <h2>Songs to make you feel cool🆒</h2>
-              <p class="understated"></p>
+            <img src="cards/card3.jpeg" alt="Alt mix" />
+            <h2>Women in Music</h2>
+            <p class="understated">Listen to feminine melodies</p>
+          </div>
+          <div id="card4" class="relative">
+            <div class="absolute play-button-container">
+              <i class="invert fa-solid fa-play"></i>
             </div>
-            <div id="card5" class="relative">
-              <div class="absolute play-button-container">
-                <i class="invert fa-solid fa-play"></i>
-              </div>
-              <img src="cards/card5.jpeg" alt="Happy Hits" />
-              <h2>Song a day 2024</h2>
-              <p class="understated">
-                Enjoy with the latest hits curated for you
-              </p>
+            <img src="cards/card4.jpeg" alt="Women in music" />
+            <h2>Songs to make you feel cool🆒</h2>
+            <p class="understated"></p>
+          </div>
+          <div id="card5" class="relative">
+            <div class="absolute play-button-container">
+              <i class="invert fa-solid fa-play"></i>
             </div>
-            <div id="card6" class="relative">
-              <div class="absolute play-button-container">
-                <i class="invert fa-solid fa-play"></i>
-              </div>
-              <img src="cards/card6.jpeg" alt="Happy Hits" />
-              <h2>Song a day 2023</h2>
-              <p class="understated">Best hits from 2023</p>
+            <img src="cards/card5.jpeg" alt="Happy Hits" />
+            <h2>Song a day 2024</h2>
+            <p class="understated">
+              Enjoy with the latest hits curated for you
+            </p>
+          </div>
+          <div id="card6" class="relative">
+            <div class="absolute play-button-container">
+              <i class="invert fa-solid fa-play"></i>
             </div>
-            <div id="card7" class="relative">
-              <div class="absolute play-button-container">
-                <i class="invert fa-solid fa-play"></i>
-              </div>
-              <img src="cards/card7.jpeg" alt="Happy Hits" />
-              <h2>Song a day 2022</h2>
-              <p class="understated">Great hits from 2022</p>
+            <img src="cards/card6.jpeg" alt="Happy Hits" />
+            <h2>Song a day 2023</h2>
+            <p class="understated">Best hits from 2023</p>
+          </div>
+          <div id="card7" class="relative">
+            <div class="absolute play-button-container">
+              <i class="invert fa-solid fa-play"></i>
             </div>
-            <div id="card8" class="relative">
-              <div class="absolute play-button-container">
-                <i class="invert fa-solid fa-play"></i>
-              </div>
-              <img src="cards/card8.jpeg" alt="Happy Hits" />
-              <h2>Song a day 2021</h2>
-              <p class="understated">Enjoy with the vibe of 21</p>
+            <img src="cards/card7.jpeg" alt="Happy Hits" />
+            <h2>Song a day 2022</h2>
+            <p class="understated">Great hits from 2022</p>
+          </div>
+          <div id="card8" class="relative">
+            <div class="absolute play-button-container">
+              <i class="invert fa-solid fa-play"></i>
             </div>
-            <div id="card8" class="relative">
-              <div class="absolute play-button-container">
-                <i class="invert fa-solid fa-play"></i>
-              </div>
-              <img src="cards/card9.jpeg" alt="Happy Hits" />
-              <h2>summer mix</h2>
-              <p class="understated">by jaredlbus</p>
+            <img src="cards/card8.jpeg" alt="Happy Hits" />
+            <h2>Song a day 2021</h2>
+            <p class="understated">Enjoy with the vibe of 21</p>
+          </div>
+          <div id="card8" class="relative">
+            <div class="absolute play-button-container">
+              <i class="invert fa-solid fa-play"></i>
             </div>
-            <div id="card8" class="relative">
-              <div class="absolute play-button-container">
-                <i class="invert fa-solid fa-play"></i>
-              </div>
-              <img src="cards/card10.jpeg" alt="Happy Hits" />
-              <h2>fall mix</h2>
-              <p class="understated">by jaredlbus</p>
+            <img src="cards/card9.jpeg" alt="Happy Hits" />
+            <h2>summer mix</h2>
+            <p class="understated">by jaredlbus</p>
+          </div>
+          <div id="card8" class="relative">
+            <div class="absolute play-button-container">
+              <i class="invert fa-solid fa-play"></i>
             </div>
-            <div id="card8" class="relative">
-              <div class="absolute play-button-container">
-                <i class="invert fa-solid fa-play"></i>
-              </div>
-              <img src="cards/card11.jpeg" alt="Happy Hits" />
-              <h2>winter mix</h2>
-              <p class="understated">by jaredlbus</p>
+            <img src="cards/card10.jpeg" alt="Happy Hits" />
+            <h2>fall mix</h2>
+            <p class="understated">by jaredlbus</p>
+          </div>
+          <div id="card8" class="relative">
+            <div class="absolute play-button-container">
+              <i class="invert fa-solid fa-play"></i>
             </div>
-            <div id="card8" class="relative">
-              <div class="absolute play-button-container">
-                <i class="invert fa-solid fa-play"></i>
-              </div>
-              <img src="cards/card12.jpeg" alt="Happy Hits" />
-              <h2>spring mix</h2>
-              <p class="understated">by jaredlbus</p>
+            <img src="cards/card11.jpeg" alt="Happy Hits" />
+            <h2>winter mix</h2>
+            <p class="understated">by jaredlbus</p>
+          </div>
+          <div id="card8" class="relative">
+            <div class="absolute play-button-container">
+              <i class="invert fa-solid fa-play"></i>
             </div>
+            <img src="cards/card12.jpeg" alt="Happy Hits" />
+            <h2>spring mix</h2>
+            <p class="understated">by jaredlbus</p>
           </div>
         </div>
-        <div id="playbar" class="absolute">
-          <p>playbar</p>
+      </div>
+      <div id="playbar" class="flexcolumn">
+        <div class="songinfo"> <p id="NowPlaying">After Dark</p><p id="caption" >Hover to immerse</p></div>
+        <div id="playbartop" class="aligncenter">
+          <div id="songbuttons">
+            <i class=" cursorpointer fa-duotone fa-solid fa-backward-step fa-2x" id="prev"></i>
+            <i class=" cursorpointer fa-solid fa-play fa-2x" id="master-play"></i>
+            <i class=" cursorpointer fa-solid fa-forward-step fa-2x" id="next"></i>
+          </div>
+          <img id="gif" src="cards/playingsongs.gif" >
+        </div>
+        <div id="playbarbottom" class="flexcolumn aligncenter justifycenter">
+      
+              <div class="songtime"> <span id="minutes">00</span>:<span id="seconds">00</span> / <span id="durationmins">00</span>:<span id="durationsecs">00</span>
+              </div>
+              <input type="range" class="cursorpointer" value="0" name="volume" id="progress-bar" />
+             
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="logics.js"></script>
+</body>
+
 </html>

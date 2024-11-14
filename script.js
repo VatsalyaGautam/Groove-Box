@@ -1,3 +1,4 @@
+const gif = document.querySelector("#gif");
 const addChildOnResize = () => {
   const nav = document.getElementById("nav");
   const leftChevron = document.getElementById("leftchevron");
@@ -18,7 +19,6 @@ const addChildOnResize = () => {
     }
   } else {
     if (childLogo) nav.removeChild(childLogo);
-
     if (leftChevron.style.display === "none")
       leftChevron.style.display = "inline-block";
     if (rightChevron.style.display === "none")
@@ -36,6 +36,7 @@ const addFooterOnResize = () => {
       footer.id = "dynamic-footer";
       footer.classList.add("shiftabitright", "shiftabitup", "mt-17");
 
+      // Links data
       const links = [
         { href: "https://www.spotify.com/in-en/legal/", text: "Legal" },
         {
@@ -86,3 +87,31 @@ window.addEventListener("resize", addChildOnResize);
 window.addEventListener("load", addChildOnResize);
 window.addEventListener("resize", addFooterOnResize);
 window.addEventListener("load", addFooterOnResize);
+
+const fullvideo = document.getElementById("vid");
+const fulldiv = document.querySelector("#mov");
+
+gif.addEventListener("mouseenter", () => {
+  fulldiv.style.display = "block";
+  fullvideo.play();
+  gif.style.opacity = "0";
+});
+gif.addEventListener("mouseleave", () => {
+  fulldiv.style.display = "none";
+  fullvideo.pause();
+  gif.style.opacity = "1";
+});
+
+const OnResize = () => {
+  const caption = document.querySelector("#caption");
+  const gif = document.querySelector("#gif");
+  if (window.innerWidth <= 672) {
+    caption.style.visibility = "hidden";
+    gif.style.visibility = "hidden";
+  } else if (!audioElement.paused && !audioElement.currentTime <= 0) {
+    caption.style.visibility = "visible";
+    gif.style.visibility = "visible";
+  }
+};
+window.addEventListener("resize", OnResize);
+window.addEventListener("load", OnResize);

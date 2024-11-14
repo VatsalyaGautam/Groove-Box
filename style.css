@@ -6,20 +6,36 @@
   font-weight: 700;
 }
 
-/* Responsive Base Styles */
 html {
   font-size: 16px;
+  max-height:100%
+  height:100%
+
 }
 
 body {
   background-color: black;
   color: white;
   width: 100%;
+  height:100%
+  max-height:100%
   min-width: 320px;
   overflow-x: hidden;
+  overflow-y: hidden;
+  max-width: 100%;
 }
-
-/* Responsive Layout */
+#container {
+  max-width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+#left {
+  width: 33%;
+  max-width: 300px;
+}
+#right {
+  width: 100%;
+}
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -30,11 +46,14 @@ footer a {
   font-size: x-small;
   margin-right: 10px;
 }
-/* Logo Styling */
+#logoAnchor{
+  z-index:14;
+}
 #logo {
   max-width: 150px;
   height: auto;
   transition: all 0.25s ease-in-out;
+  z-index:14;
 }
 
 #logo:hover {
@@ -43,23 +62,12 @@ footer a {
   border-radius: 4%;
 }
 
-/* Responsive Columns */
-#left,
-#right {
-  width: 100%;
-}
-
 @media screen and (min-width: 768px) {
   #left {
     width: 21%;
   }
-
-  #right {
-    width: 79%;
-  }
 }
 
-/* Responsive Sections */
 #home {
   height: auto;
   min-height: 20vh;
@@ -74,7 +82,6 @@ footer a {
   justify-content: space-between;
 }
 
-/* Navigation List */
 #ul1 {
   display: flex;
   flex-direction: column;
@@ -90,7 +97,6 @@ li {
   gap: 20px;
 }
 
-/* Header */
 #header {
   display: flex;
   align-items: center;
@@ -101,7 +107,6 @@ li {
   flex-wrap: wrap;
 }
 
-/* Buttons */
 #signin,
 #login {
   font-size: 16px;
@@ -141,7 +146,7 @@ li {
   gap: 15px;
   overflow-y: auto;
   padding: 10px;
-  max-height: 70vh;
+  max-height: 58vh;
 }
 
 #cardContainer > * {
@@ -158,7 +163,6 @@ li {
   word-wrap: break-word;
 }
 
-/* Responsive Breakpoints */
 @media screen and (max-width: 1200px) {
   #cardContainer > * {
     flex: 0 1 calc(25% - 20px);
@@ -183,7 +187,6 @@ li {
   }
 }
 
-/* Card Hover Effects */
 #cardContainer > *:hover {
   background-color: #4d4b4d;
   cursor: pointer;
@@ -207,7 +210,6 @@ li {
   font-size: 0.9rem;
 }
 
-/* Play Button */
 .play-button-container {
   width: 50px;
   height: 50px;
@@ -235,21 +237,6 @@ li {
   font-size: 24px;
 }
 
-/* Playbar */
-#playbar {
-  position: fixed;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 600px;
-  padding: 12px;
-  text-align: center;
-  background-color: rgba(18, 18, 18, 0.9);
-  border-radius: 10px;
-}
-
-/* Touch Optimization */
 @media (hover: none) {
   .play-button-container {
     opacity: 1;
@@ -283,4 +270,101 @@ li {
   #childlogo {
     width: 100px;
   }
+}
+#playbar {
+  margin: 20px;
+  margin-right: 28px;
+  width: calc(100% - 45px);
+  height: 10em;
+  padding: 12px;
+  background-color: #1d2626;
+  border-radius: 0.5em;
+  justify-content: center;
+  align-items: center;
+}
+#songbuttons i {
+  margin-left: 13px;
+}
+
+#playbartop {
+  height: 50%;
+  width: 80%;
+}
+#playbarbottom {
+  height: 50%;
+  width: 80%;
+}
+#playbarbottom input {
+  width: 95%;
+  margin-top: 5px;
+  cursor-pointer
+}
+
+.songinfo img{
+  width:20vw;
+  height:5em;
+  right:0.5vw;
+  position:absolute;
+}
+
+.songinfo p{
+  display:inline-block;
+}
+
+#gif{
+  visibility:hidden;
+  height:4em;
+  align:right;
+  width:10em;
+  margin-left:auto ;
+  z-index:12;
+  padding:2px;
+  
+}
+
+#mov {
+  width: 100vw; 
+  height: 100vh; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  z-index: 11;
+  display: none; 
+  overflow: hidden;
+}
+
+
+video {
+  width: 100vw;
+  height: 100vh; 
+  object-fit: cover; 
+}
+#playbartop{
+  display:flex;
+  justify-content:space-between;
+  width: 100%;
+}
+#songbuttons{
+  align:center;
+  margin: auto -9em auto auto; 
+}
+
+#caption{
+  visibility:hidden;
+  font-weight: 300;
+  height:1em;
+  right:16px;
+  position:absolute;
+  
+}
+.songinfo {
+  display:flex;
+  text-align: center;
+  width:100%;
+  justify-content: space-between;
+  align-items: center;
+  position:relative
+}
+#NowPlaying{
+  margin:auto;
 }
