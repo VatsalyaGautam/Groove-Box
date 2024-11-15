@@ -23,8 +23,7 @@ const songs = [
   { songname: "Starboy", path: "songs/Starboy.mp3" },
   { songname: "Swim", path: "songs/Swim.mp3" },
 ];
-
-masterPlay.addEventListener("click", () => {
+const handlePlayNPause = (audioElement) => {
   if (audioElement.paused || audioElement.currentTime <= 0) {
     audioElement.play();
     if (masterPlay.classList.contains("fa-play")) {
@@ -45,6 +44,9 @@ masterPlay.addEventListener("click", () => {
     gif.style.visibility = "hidden";
     caption.style.visibility = "hidden";
   }
+};
+masterPlay.addEventListener("click", () => {
+  handlePlayNPause(audioElement);
 });
 
 audioElement.addEventListener("timeupdate", () => {
@@ -94,6 +96,7 @@ next.addEventListener("click", () => {
   audioElement.src = songs[songIndex].path;
 
   audioElement.play();
+  handlePlayNPause(audioElement);
   new_song_duration(audioElement);
   nowPlaying.innerHTML = songs[songIndex].songname;
 });
@@ -102,6 +105,40 @@ prev.addEventListener("click", () => {
   audioElement.src = songs[songIndex].path;
 
   audioElement.play();
+  handlePlayNPause(audioElement);
   new_song_duration(audioElement);
   nowPlaying.innerHTML = songs[songIndex].songname;
+});
+const song1 = document.getElementById("song1");
+const song2 = document.getElementById("song2");
+const song3 = document.getElementById("song3");
+const song4 = document.getElementById("song4");
+
+song1.addEventListener("click", () => {
+  audioElement.src = songs[1].path;
+  audioElement.play();
+  handlePlayNPause(audioElement);
+  new_song_duration(audioElement);
+  nowPlaying.innerHTML = songs[1].songname;
+});
+song2.addEventListener("click", () => {
+  audioElement.src = songs[2].path;
+  audioElement.play();
+  handlePlayNPause(audioElement);
+  new_song_duration(audioElement);
+  nowPlaying.innerHTML = songs[2].songname;
+});
+song3.addEventListener("click", () => {
+  audioElement.src = songs[7].path;
+  audioElement.play();
+  handlePlayNPause(audioElement);
+  new_song_duration(audioElement);
+  nowPlaying.innerHTML = songs[7].songname;
+});
+song4.addEventListener("click", () => {
+  audioElement.src = songs[8].path;
+  audioElement.play();
+  handlePlayNPause(audioElement);
+  new_song_duration(audioElement);
+  nowPlaying.innerHTML = songs[8].songname;
 });

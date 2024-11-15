@@ -30,7 +30,7 @@ body {
   box-sizing: border-box;
 }
 #left {
-  width: 33%;
+  width: 50%;
   max-width: 300px;
 }
 #right {
@@ -64,7 +64,7 @@ footer a {
 
 @media screen and (min-width: 768px) {
   #left {
-    width: 21%;
+    width: 43%;
   }
 }
 
@@ -75,7 +75,7 @@ footer a {
 }
 
 #library {
-  height: auto;
+  height: 38vh;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -146,7 +146,7 @@ li {
   gap: 15px;
   overflow-y: auto;
   padding: 10px;
-  max-height: 58vh;
+  height:auto;
 }
 
 #cardContainer > * {
@@ -272,10 +272,10 @@ li {
   }
 }
 #playbar {
-  margin: 20px;
+  margin: 4px;
   margin-right: 28px;
-  width: calc(100% - 45px);
-  height: 10em;
+  width: 98%;
+  height: 20vh;
   padding: 12px;
   background-color: #1d2626;
   border-radius: 0.5em;
@@ -367,4 +367,28 @@ video {
 }
 #NowPlaying{
   margin:auto;
+}
+#songList {
+  width: 100%;
+  height: 100%;
+
+  padding: 5px 3px 5px 3px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+
+}
+#spotifyplaylists{
+  height:71vh;
+}
+#songList > div{
+  border: 1px #504f4f solid;
+  border-radius:11px;
+  height:11vh;
+  padding:10px 3px 10px 3px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items:center;
+
 }
